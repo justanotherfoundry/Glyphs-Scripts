@@ -142,7 +142,7 @@ class InstanceSlider(object):
 		if "Weight" not in [a[0] for a in av]:
 			self.w.checkY.enable(False)
 
-		columnTitles = [{"title": "Instance", "width": self.w.getPosSize()[2] - axisX * (len(av) + 1)}]
+		columnTitles = [{"title": "Instance"}]
 		for i in range(len(av)):
 			columnTitles += [{"title": av[i][0], "width": axisX}]
 
