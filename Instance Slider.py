@@ -193,6 +193,9 @@ class InstanceSlider(object):
 
 			for i, els in enumerate(self.usedAxisElements):
 				if Glyphs.versionNumber > 2.5:
+					if not instance.axes:
+						# seems to be a VF setting, not a real instanmce
+						continue
 					els[1].set(float(instance.axes[i]))
 					els[2].set(int(instance.axes[i]))
 				else:
