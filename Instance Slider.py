@@ -148,7 +148,7 @@ class InstanceSlider(object):
 
 		self.w.list = vanilla.List((0, 0, -0, -(YOffset - 18)), insList, selectionCallback=self.listClick, allowsMultipleSelection=False, allowsEmptySelection=False, columnDescriptions=columnTitles)
 		self.w.list._nsObject.setBorderType_(NSNoBorder)
-		tableView = self.w.list._tableView
+		tableView = self.w.list.getNSTableView()
 		tableView.setAllowsColumnReordering_(False)
 		tableView.unbind_("sortDescriptors")  # Disables sorting by clicking the title bar
 		for i in range(len(av)):
