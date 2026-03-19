@@ -146,7 +146,7 @@ class InstanceSlider(object):
 		for i in range(len(av)):
 			columnTitles += [{"title": av[i][0], "width": axisX}]
 
-		self.w.list = vanilla.List((0, 0, -0, -(YOffset - 18)), insList, selectionCallback=self.listClick, allowsMultipleSelection=False, allowsEmptySelection=False, columnDescriptions=columnTitles)
+		self.w.list = vanilla.List(posSize=(0, 0, -0, -(YOffset - 18)), items=insList, selectionCallback=self.listClick, allowsMultipleSelection=False, allowsEmptySelection=False, columnDescriptions=columnTitles)
 		self.w.list._nsObject.setBorderType_(NSNoBorder)
 		tableView = self.w.list.getNSTableView()
 		tableView.setAllowsColumnReordering_(False)
